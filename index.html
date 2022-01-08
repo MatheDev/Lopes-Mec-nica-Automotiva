@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Lopes Mecânica Automotiva</title>
 
@@ -54,8 +55,89 @@
           <p>Trabalhamos com retífica de bombas, pistão, cabeçote, retentores e etc.</p>
         </div>
     </section>
+    
+    <h2 class="titleLogo">Algumas das marcas que trabalhamos</h2>
+       <!-- Swiper -->
+        <div class="swiper">
+          
+          <div class="swiper-wrapper">
+            
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="line">
+                  <img src="assets/images/fiat.png" alt="Fiat">
+                  <img src="assets/images/honda.png" alt="Honda">
+                  
+                </div>
+                <div class="line">
+                  <img src="assets/images/gm.png" alt="Chevrolet">
+                  <img src="assets/images/ford.png" alt="Ford">
+                </div>
+              </div>
+           </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="line">
+                  <img src="assets/images/hyundai.png" alt="Hyundai">
+                  <img src="assets/images/kia.png" alt="Kia">
+                  
+                </div>
+                <div class="line">
+                  <img src="assets/images/mitsubishi.png" alt="Mitsubishi">
+                  <img src="assets/images/nissa.png" alt="Nissan">
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="line">
+                  <img src="assets/images/peugeot.png" alt="Peugeot">
+                  <img src="assets/images/renault.png" alt="Renault">
+                  
+                </div>
+                <div class="line">
+                  <img src="assets/images/toyota.png" alt="Toyota">
+                  <img src="assets/images/vw.png" alt="Volkswagen">
+                </div>
+              </div>
+            </div>
+           
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+    
+
 
   </main>
+  <script src="assets/js/script.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  
+  <!-- Initialize Swiper -->
+  <script type="module">
+    // import Swiper from 'swiper/swiper-bundle.esm.js';
+    // import 'swiper/swiper-bundle.css';
+    var swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+
 
 </body>
 </html>
