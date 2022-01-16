@@ -28,7 +28,7 @@ body{
   min-height: 100vh;
   
   background: var(--background-color);
-  padding: 20px 10px;
+  padding: 20px 30px;
   font-family: 'Poppins', sans-serif;
   position: relative;
 }
@@ -91,11 +91,34 @@ header h3{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   
 }
 
+.logo-banner{
+  display: flex;
+  justify-content:center;
+}
+
 .banner img{
-  width: 100%;
+  max-width: 100%;
+  width: 600px;
+  
+}
+
+.content-banner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.banner p{
+  color: var(--bege);
+  padding: 10px;
+  font-style: italic;
+  text-align: center;
 }
 
 .explore-services{
@@ -106,6 +129,7 @@ header h3{
   font-size: 1rem;
   font-weight: 700;
   transition: all 0.2s;
+  margin: 80px 0;
 }
 
 .explore-services:hover{
@@ -137,10 +161,6 @@ header h3{
   background: rgb(98, 40, 40);
   /* background: rgb(190, 57, 57); */
   color: var(--white);
-}
-
-.service:first-child{
-  margin-top: 100px;
 }
 
 .service img{
@@ -209,11 +229,17 @@ header h3{
 
 .tips{
   margin-top: 60px;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tips-cards{
+  width: 100%;
 }
 
 .tips-card{
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -223,13 +249,13 @@ header h3{
 
 .tips-card .section-img{
   width: 100%;
-  
 }
 
 
 .tips-card img{
   max-width: 100%;
   width: 100%;
+  
 }
 
 .tips-card .section-content{
@@ -316,10 +342,6 @@ footer .logo img{
   max-width: 200px;
 }
 
-footer .footer-contact{
-
-}
-
 .address,
 .phone,
 .email{
@@ -342,6 +364,11 @@ footer .navigator nav{
   color: var(--white);
 }
 
+footer .navigator nav a{
+  color: var(--bege);
+  margin-bottom: 10px;
+}
+
 footer .social{
  margin-top: 30px;
 }
@@ -349,4 +376,65 @@ footer .social{
 footer .social ion-icon{
   font-size: 30px;
   color: var(--bege);
+}
+
+/* Media queries */
+
+@media screen and (min-width: 768px){
+   
+  
+
+   .services {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     max-width: 800px;
+   }
+
+   .service{
+    margin: 10px;
+    max-width: 400px;
+   }
+
+   .tips-cards{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     max-width: 1200px;
+   }
+
+   .tips-card .section-content{
+     height: 70%;
+   }
+
+  }   
+
+
+@media screen and (min-width: 800px){
+  footer{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .banner{
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .banner .content-banner{
+    max-width: 50%;
+  }
+
+  .banner .logo-banner{
+    width: 50%;
+  }
+
+  .title{
+    font-size: 3rem;
+  }
+
+  .contact .contact-desc{
+    font-size: 1.5rem;
+  }
+  
 }
