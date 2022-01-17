@@ -153,6 +153,7 @@ main{
 .banner img{
   max-width: 100%;
   width: 600px;
+  margin-top: 30px;
   
 }
 
@@ -451,7 +452,10 @@ footer .social ion-icon{
 /* Media queries */
 
 @media screen and (min-width: 768px){
-   
+   /* Header */
+   .header{
+    position: absolute;
+   }
   
   /* Section services */
    .services {
@@ -510,13 +514,13 @@ footer .social ion-icon{
 }
 
 @media screen and (min-width: 1024px){
-  
   /* Section banner */
   .banner{
     flex-direction: row;
     width: 100%;
     max-width: 70%;
     height: 100vh;
+    margin-top: 50px;
   }
 
   .banner .content-banner{
